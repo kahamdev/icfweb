@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}zakaat{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">zakaat</em>
+              <p>Zakat is the third pillar of Islam. It is an obligatory act of charity amounting to 2.5% of a Muslim’s annual savings. Zakat is intended to purify our wealth, not only physically, but also spiritually.</p>
+             </div>
+             <div class="zakat-container">
+                <h5>Types of Zakat</h5>
+                <p>1. Zakat al Mal: The most common type of Zakat, Zakat al Mal is the annual donation made on the the wealth of an individual. 
+                  The wealth include money in cash, gold, silver and property.</p>
+                <p>2. Zakat al Fitr: Another significant donation that is obligatory for Muslims is Zakat al Fitr. 
+                  The donation is made before the Eid in the fixed time limit for making it valid.</p>
+               
+               <h5>Who Receives Zakat?</h5>
+                <q>Muslims pay Zakat to eight categories of eligible people set by God in the Quran (Surat Al-Tawbah, 9:60):</q>
+                <p>1.The Poor (in dire need prevented from asking)</p>
+                <p>2.The Indigent (whose destitution drives them to ask)</p>
+                <p>3.Those Administering Zakat’s collection and distribution</p>
+                <p>4.Those whose hearts are to be reconciled</p>
+                <p>5.Those in bondage (slaves to be freed and captives)</p>
+                <p>6.The Debt-Ridden</p>
+                <p>7.In the Cause of God</p>
+                <p>8.The Wayfarer (stranded, displaced, or cut off from resources while traveling)</p>
+               
+                <h5>how to calculate zakat</h5>
+                <iframe width="560" height="400" src="https://www.youtube.com/embed/oRyH_UhuR_o" title="Simplified Zakat Guidance: The Basics of Zakat Calculation | Dr. Mufti Abdur-Rahman ibn Yusuf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <br><br>
+             <br><br>
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

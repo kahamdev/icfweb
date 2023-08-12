@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}fasting ramadan{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">fasting ramadan</em>
+              <p>Fasting during Ramadan means abstinence from all food or drink and marital relations , including water and chewing gum, from dawn to sunset,with the intention of drawing near to Allah (swt).</p>
+             </div>
+             <div class="fasting-container">
+                <h5>Who has to fast in Ramadan</h5>
+                <p>All adult Muslims of sound mind are required to fast in Ramadan. </p>
+                <h5>Who is exempt from fasting in Ramadan</h5>
+                <p>1.A sick person</p>
+                <p>2.A traveller</p>
+                <p>3.A frail elderly person</p>
+                <p>4.A pregnant or breastfeeding woman</p>
+                <p>5.A woman experiencing menstruation or post-natal bleeding</p>
+                <h5>What doesn’t break your fast in Ramadan</h5>
+                <p>1.Breaking the fast forgetfully</p>
+                <p>2.Involuntary vomiting or induced vomiting less than a mouthful</p>
+                <p>3.Having a wet dream</p>
+                <p>4.Delaying performing ritual bath</p>
+                <p>5.Bleeding</p>
+                <h5>how to fasting ramadan</h5>
+                <iframe width="560" height="400"  src="https://www.youtube.com/embed/vjppCGAuTyo" title="HOW TO FAST IN RAMADAN CORRECTLY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <br><br>
+             <br><br>
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}qn04{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">FAQ's for question four</em>
+             </div>
+
+             <div class="qn04-container">
+             {% if faq04 %}
+             {% for f in faq04 %}
+             <h3>{{f.question_four}}</h3>
+             <h5>{{f.answer_four}}</h5>
+             <p>{{f.description}}</p>
+             {% endfor %}
+
+             {% else %}
+             <h3>Does islam oppress women?</h3>
+             <h5>No,Islam raised the level of women</h5>
+             <p>
+              “O you who believe!  You are forbidden to inherit women against their will, and you should not treat them with harshness, that you may take away part of the bridal money you have given them. And live with them honourably.  If you dislike them, it may be that you dislike a thing and God brings a great deal of good through it.” (Quran 4:19)
+             </p>
+          {% endif %}
+            </div>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

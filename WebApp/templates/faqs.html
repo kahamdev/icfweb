@@ -1,0 +1,42 @@
+    {% block content %}
+    {% if faqs %}
+       {% for f in faqs %}
+    <div class="right-side-group-list">
+    <a href="{% url 'question-one' %}">{{f.question_one}}</a>
+    </div>
+
+    <div class="right-side-group-list">
+        <a href="{% url 'question-two' %}">{{f.question_two}}</a> 
+      </div>
+  
+      <div class="right-side-group-list">
+        <a href="{% url 'question-three' %}">{{f.question_three}}</a> 
+      </div>
+  
+      <div class="right-side-group-list">
+        <a href="{% url 'question-four' %}">{{f.question_four}}</a> 
+      </div>
+
+      {% endfor %}
+    
+    {% else %}
+
+     <div class="right-side-group-list">
+        <a href="{% url 'question-one' %}">Who is Allaah?</a> 
+      </div>
+
+     <div class="right-side-group-list">
+        <a href="{% url 'question-two' %}">Who is Muhammmad?</a> 
+      </div>
+  
+      <div class="right-side-group-list">
+        <a href="{% url 'question-three' %}">Was islam spread by the sword?</a> 
+      </div>
+  
+      <div class="right-side-group-list">
+        <a href="{% url 'question-four' %}">Does islam oppress women?</a> 
+      </div>
+
+    {% endif %}
+
+    {% endblock %}

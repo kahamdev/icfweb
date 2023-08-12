@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}qn02{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">FAQ's for question two</em>
+             </div>
+
+             <div class="qn02-container">
+             {% if faq02 %}
+             {% for f in faq02 %}
+             <h3>{{f.question_two}}</h3>
+             <h5>{{f.answer_two}}</h5>
+             <p>{{f.description}}</p>
+             {% endfor %}
+
+             {% else %}
+             <h3>Who is Muhammad?</h3>
+             <h5>Prophet Muhammad (ca. 571 - June 8, 632), peace be upon him, is the Messenger of Allah (SWT), and the final Prophet of Islam.</h5>
+             <p>
+              Prophet Muhammad was born in Makkah in the year of the Elephant. His father died before he was born, and after he was born, Haleemah al-Sa’diyyah nursed him. When he was six years old, he visited his maternal uncles in Madinah with his mother Aminah bint Wahb. On the way back to Makkah, his mother died in al-Abwa. For more about the life of Prophet Muhammad
+             </p>
+          {% endif %}
+            </div>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

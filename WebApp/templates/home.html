@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}home {% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/icf-01.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/hadhwir-01.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/speaker-01.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/reward-01.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/speaker-04.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+         <div class="center-side-text mt-3">
+         <em id="center-side-text-one"> ICF Vision </em>
+         <p>To see the children and the community get good health and useful education.</p>
+         </div>
+            
+           <div class="center-side-text mt-3">
+            <em id="center-side-text-one"> ICF Mission</em>
+            <p>Building schools with the aim of implementing our vision and building health centers.
+              To support the Government's efforts by participating directly in building a better society with good Tanzanian Values ​​in the Service Sector</p>
+           </div>
+      
+             <div class="center-side-text mt-3">
+              <em id="center-side-text-one">ICF Activities </em>
+             </div>
+             
+             <div class="row-table">
+                  <div class="column-table">
+                      <img src="{% static 'images/icf-06.jpg' %}" alt="image">
+                  </div>
+                  <div class="column-table">
+                      <p>Some of ICF teams that visit the project of construction water well at the kairumbi maule area to  ashraf mosque that acts as.
+                        Some of ICF teams that visit the project of construction water well at the kairumbi maule area to  ashraf mosque that acts as.
+                      </p>
+                  </div>
+                
+                  <div class="column-table">
+                    <img src="{% static 'images/icf-07.jpg' %}" alt="image">
+                </div>
+                <div class="column-table">
+                    <p>Some of ICF teams that visit the project of construction water well at the kairumbi maule area to  ashraf mosque that acts as.
+                      Some of ICF teams that visit the project of construction water well at the kairumbi maule area to  ashraf mosque that acts as.
+                    </p>
+                </div>
+                
+             </div>
+      
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one"> Islamic essences knowledge</em>
+             </div>
+      
+             <div class="row-message mb-5">
+                  <div class="row-message-one">
+                      <img src="{% static 'images/wudu.jpg' %}" alt="wudu image">
+                      <h5><a href="{% url 'wudhu' %}"> Wudhu</a></h5>
+                  </div>
+                  <div class="row-message-two">
+                    <img src="{% static 'images/salat.jpg' %}" alt="prayer image">
+                    <h5><a href="{% url 'salat' %}"> Salat</a></h5>
+                  </div>
+                  <div class="row-message-three">
+                    <img src="{% static 'images/ramadan.png' %}" alt="fasting image">
+                    <h5><a href="{% url 'fasting' %}"> Fasting</a></h5>
+                  </div>
+                  <div class="row-message-four">
+                    <img src="{% static 'images/zakat.jpg' %}" alt="zakaat image">
+                    <h5><a href="{% url 'zakat' %}"> Zakaat</a></h5>
+                  </div>
+                  <div class="row-message-five">
+                    <img src="{% static 'images/hijja.jpg' %}" alt="hijjah image">
+                    <h5><a href="{% url 'hijah' %}">Hijah</a></h5>
+                  </div>
+             </div>
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                         
+                           {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      <a href="https://facebook.com/profile.php?id=100077478810458"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com/invites/contact/?i=1ufhbxsp38p36&utm_content=mtype0e1"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com/islamiccallftz?t=_n0fClPoKBLhXfyc2xQokA&s=09"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                      <a href="https://youtube.com/channel/UCB-JFh4Qhq6oQ7xvgpA1b2A"><img  class="youtube-img" src="{% static 'images/youtube.png' %}" alt="youtube"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

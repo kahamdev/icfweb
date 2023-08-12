@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}qn01{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">FAQ's for question one</em>
+             </div>
+
+             <div class="qn01-container">
+             {% if faq01 %}
+                {% for f in faq01 %}
+                <h3>{{f.question_one}}</h3>
+                <h5>{{f.answer_one}}</h5>
+                <p>{{f.description}}</p>
+                {% endfor %}
+
+                {% else %}
+                <h3>Who is Allaah?</h3>
+                <h5>Allah is the proper name of the One True God</h5>
+                <p>Allah is the name of the God Almighty in the Arabic Language. Allah is the personal name of God. The word Allah is never used for any other being or thing.
+                  The Prophet Muhammad  sallallaahu  `alayhi  wa  sallam ( may  Allah exalt his mention ) (may Allah exalt his mention) was asked by his contemporaries about Allah; the answer came directly from Allah Himself in the form of a short chapter of the Quran, which is considered the essence or the motto of monotheism. This is chapter 112 which reads (what means): “Say: ‘He is Allah, (who is) One, Allah, the Eternal Refuge. He neither begets nor is born, nor is there to Him any equivalent.’” [Quran 112:1]
+                </p>
+             {% endif %}
+              </div>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+             <br><br>
+
+           
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} management {% endblock title %}
+
+
+{% block content %}
+    <div class='container'>
+        <div class='management-content mt-3'>
+               <h5 class="pt-3">&emsp;<em id="center-side-text-one">ICF Management Teams</em></h5>
+               <div class='team-card'>
+                    <img src="{% static 'images/icf-managmt-01.jpg' %}" width="200" height="200" alt="manager-photo"/>
+                    <p><strong>Name:</strong>&nbsp;Mr Masoud Said</p>
+                    <p><strong>Position:</strong>&nbsp;Director & CEO</p>
+                    <p><strong>Mobile:</strong>&nbsp;+255787997667</p>
+               </div>
+
+               <div class='team-card'>
+                <img src="{% static 'images/chairperson.png' %}" width="200" height="200" alt="manager-photo"/>
+                <p><strong>Name:</strong>&nbsp;Mr Juma Farijala</p>
+                <p><strong>Position:</strong>&nbsp;ICF Chairperson</p>
+                <p><strong>Mobile:</strong>&nbsp;+255623733335</p>
+                </div>
+
+               <div class='team-card'>
+                <img src="{% static 'images/coordinator.png' %}" width="200" height="200" alt="coordinator-photo"/>
+                <p><strong>Name:</strong>&nbsp;Mr Rajabu Salum</p>
+                <p><strong>Position:</strong>&nbsp;ICF Coordinator</p>
+                <p><strong>Mobile:</strong>&nbsp;+255685651967</p>
+               </div>
+
+               <div class='team-card'>
+                <img src="{% static 'images/secretary.png' %}" width="200" height="200" alt="manager-photo"/>
+                <p><strong>Name:</strong>&nbsp;Mr Ibrahim Hassani</p>
+                <p><strong>Position:</strong>&nbsp;ICF Secretary</p>
+                <p><strong>Mobile:</strong>&nbsp;+255673680609</p>
+                </div>
+
+                <div class='team-card'>
+                    <img src="{% static 'images/informationOfficer.png' %}" width="200" height="200" alt="manager-photo"/>
+                    <p><strong>Name:</strong>&nbsp;Mr Ahmed Kimamba</p>
+                    <p><strong>Position:</strong>&nbsp;ICF Information Officer</p>
+                    <p><strong>Mobile:</strong>&nbsp;+255746817700</p>
+                </div>
+
+        </div>
+    </div>
+
+{% endblock content %}

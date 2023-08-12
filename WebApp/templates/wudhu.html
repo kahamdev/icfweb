@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}wudhu{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">wudu&ensp;(ablution)</em>
+              <p>Wudu is the Islamic act of purification and ablution. It is a step-by-step process that not only physically purifies us 
+                but also spiritually prepares us for the act of prayer.</p>
+             </div>
+             <div class="wudhu-container">
+              <h5>Steps to perform ablution (wudu)</h5>
+             <p>1.Intention (Niyyah)</p>
+             <p>2.Wash your hands</p>
+             <p>3.Rinse nose and mouth</p>
+             <p>4.Wash your face</p>
+             <p>5.Wash your arms</p>
+             <p>6.Wipe your head</p>
+             <p>7.Clean your ears</p>
+             <p>8.Wash your feet</p>
+             <iframe width="560" height="400" src="https://www.youtube.com/embed/7ZzuodN_Sao" title="A Simple guide on how to perform Ablution (Wudu)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <br><br>
+             <br><br>  
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

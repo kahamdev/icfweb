@@ -1,0 +1,63 @@
+
+{% load static %}
+<html>
+<head>
+<title>{% block title %} {% endblock title %}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" async defer></script>
+
+</head>
+
+<body>
+    <div class="box-content">
+      <div class="all-container">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+          <div class="container-fluid">
+          
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo3.jpg' %}" alt='logo' width="50" height="50"/>&nbsp;Islamic Call Foundation</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'contact' %}">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'management' %}">Management</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'gallery' %}">Gallery</a>
+                </li>
+              </ul>
+              <button class='btn btn-warning'><a style="text-decoration:none; color:white;" href="{% url 'donate' %}">Donate</a></button>
+         
+            </div>
+          </div>
+        </nav>
+        
+      
+            {% block content %}
+                
+            {% endblock content %}
+              <div class="footer">
+                 <p class=" footer text-center"> All &copy;2022 copyright are reserved by ICF </p>
+              </div>
+              </div>
+      </div>
+      
+      
+    </body>     
+ </html>  
+

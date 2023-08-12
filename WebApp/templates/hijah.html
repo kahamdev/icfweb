@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}hijjah{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+            
+
+      
+             <div class="center-side-text ">
+              <em id="center-side-text-one">hajj&ensp;(pilgrimage)</em>
+              <p>Hajj is a spiritual duty and a pillar of Islam, and for many, it is a once in a lifetime event. Going more than once during your lifetime is permitted whilst sincerely seeking Allah’s (SWT) (which means ‘The Most Glorified, The Most High) pleasure.</p>
+             </div>
+             
+             <div class="hajj-container">
+               <h5>Who should go on the Hajj?</h5>
+               <p>It is mandatory for Muslim adults to go on Hajj at least once in their lifetime. They must be of sound mind and physically and financially capable of undertaking the journey.
+                 Those who complete the pilgrimage can add the title Hajji to their names.</p>
+                
+               <h5>When is Hajj?</h5>
+               <p>The pilgrimage must take place during the month of Dhu al Hijja, the last month of the Islamic calendar.
+                 The rites of Hajj are performed from the 8th to the 12th of Dhu al Hijjah.</p>
+            
+               <h5>Steps of hajj</h5>
+               <p>1.Ihram and Intentions</p>
+               <p>2.Mina aka “City of tents”</p>
+               <p>3.Mina to Arafat, 9th day of Dhul-Hijjah</p>
+               <p>4.Muzdalifah</p>
+               <p>5.Rami – Stoning the devil</p>
+               <p>6.Nahr</p>
+               <p>7.Farewell Tawaf</p>
+
+               <h5>how to perform hajj</h5>
+               <iframe width="560" height="400" src="https://www.youtube.com/embed/wnVDqh52MdU" title="How to perform hajj properly By Dr muhammad Salah #HAJJ 2019 #HUDATV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+             
+             <br><br>
+             <br><br>
+
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}

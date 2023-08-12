@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}salat{% endblock title %}
+{% block content %}
+<marquee class="marquee-date" behavior="scroll" scrollamount="10" direction="left">  Today date is {{today}}</marquee>
+        <div class="side">
+           <div class="left-side">
+                <div class="left-side-list">
+                  <ul class="left-side-list-content">
+                    <li> <a href="{% url 'event' %}">&emsp;ICF events</a></li>
+                   </ul>
+                      <ul class="left-side-list-content">
+                          <li> <a href="{% url 'quote' %}">&emsp;ICF quotes</a></li>
+                      </ul>
+
+              
+                </div>
+           </div>
+          
+           <div class="center-side">
+
+             <div class="center-side-text ">
+              <em id="center-side-text-one">Salat &nbsp;(prayer)</em>
+              <p>Salah (Prayer) is the second pillar of Islam.It was the first act of
+                worship that was made obligatory by
+                Allah u and it is the last thing to be
+                taken away from the religion. When it
+                perishes, Islam will perish.</p>
+             </div>
+             <div class="salat-container">
+             <h5>prayer times</h5>
+             <p>1.FAJR(Dawn Prayer):&ensp;Fajr is performed after
+              dawn and before sunrise.
+              Fajr consists of 2 Units
+              (raka’ah).</p>
+             <p>2.DHUHR(Noon Prayer):&ensp;Dhuhr is performed
+              when the sun passes the
+              meridian. Dhuhr consists
+              of 4 Units (raka’ah).</p>
+             <p>3.ASR(Afternoon Prayer):&ensp;Asr is performed midway
+              between noon and
+              sunset. Asr consists of 4
+              Units (raka’ah).</p>
+             <p>4.MAGHREB(Sunset Prayer):&ensp;Maghreb is performed
+              immediately after sunset.
+              Maghreb consists of 3
+              Units (raka’ah).</p>
+             <p>5.ISHA(Night Prayer):&ensp;Isha is performed after
+              twilight up until fajr
+              although it is preferred
+              to be prayed before
+              midnight. Isha consists of
+              4 units (raka’ah).</p>
+              <h5>steps to perform prayer</h5>
+              <iframe width="560" height="400" src="https://www.youtube.com/embed/zalLv2NY98k" title="How to Pray? Step by Step Guide to Prayer | Mohammad AlNaqwi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+             </div>
+             <br><br>
+             <br><br>
+      
+           </div>
+             <div class="right-side">
+               
+                  
+                   <div class="right-side-group text-center">
+                         
+                          <em id="text" class="frequent-title"> Frequent asked</em>
+                         
+                          {% include 'faqs.html' %}
+
+                            
+                   </div>
+
+
+      
+                  <div class="contact">
+                    <em class="contact-us">Our social links</em>
+                    
+                    <div class="contact-social-network">
+                      &emsp; <a href="https://facebook.com"><img class="instagram-img" src="{% static 'images/fb.png' %}" alt="instagram"></a> 
+                      <a href="https://instagram.com"> <img class="instagram-img" src="{% static 'images/instagram.jpeg' %}" alt="instagram"></a>
+                      <a href="https://tweeter.com"><img  class="tweeter-img" src="{% static 'images/tweeter.png' %}" alt="tweeter"></a>
+                 </div>
+                </div>
+      
+                
+      
+           </div>
+        </div>
+      
+
+{% endblock content %}
